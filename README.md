@@ -1,1 +1,218 @@
 # JavaProgramsForInterview
+
+
+
+Patter programs for java.
+
+1.Backwardtriangle
+
+public class BackwardTriangle {
+
+    public static void main(String[] args) {
+        int rows = 5; // Number of rows in the triangle
+
+        for (int i = rows; i >= 1; i--) {
+            // Print spaces
+            for (int j = 1; j <= rows - i; j++) {
+                System.out.print(" ");
+            }
+
+            // Print stars
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+
+            System.out.println(); // Move to the next line
+        }
+    }
+}
+
+
+
+
+2.Diamond.txt
+
+import java.util.Scanner;
+
+public class DiamondPattern {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the diamond: ");
+        int n = scan.nextInt();
+        printDiamond(n);
+    }
+
+    private static void printDiamond(int n) {
+        // Upper part of the diamond
+        for (int i = 1; i <= n; i++) {
+            for (int j = i; j < n; j++) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        // Lower part of the diamond
+        for (int i = n - 1; i >= 1; i--) {
+            for (int j = n; j > i; j--) {
+                System.out.print(" ");
+            }
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+3.Lefttriangle
+
+public class LeftTrianglePattern {
+    public static void main(String[] args) {
+        int numRows = 5; // You can change this value to print a larger or smaller triangle
+        for (int i = 1; i <= numRows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+4.Pyramid
+
+import java.util.Scanner;
+
+public class PyramidPattern {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the pyramid: ");
+        int rows = scan.nextInt();
+        printPyramid(rows);
+    }
+
+    private static void printPyramid(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            // Print spaces
+            for (int j = rows; j > i; j--) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+5.Reverse pryamid
+
+import java.util.Scanner;
+
+public class PyramidPattern {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the pyramid: ");
+        int rows = scan.nextInt();
+        printPyramid(rows);
+    }
+
+    private static void printPyramid(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            // Print spaces
+            for (int j = rows; j > i; j--) {
+                System.out.print(" ");
+            }
+            // Print stars
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+6.Rightpascal
+
+import java.util.Scanner;
+
+public class RightPascalTriangle {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number of rows for the Right Pascal's Triangle: ");
+        int rows = scan.nextInt();
+        printRightPascalTriangle(rows);
+    }
+
+    private static void printRightPascalTriangle(int rows) {
+        // Upper part of the triangle
+        for (int i = 1; i <= rows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        // Lower part of the triangle
+        for (int i = rows - 1; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+7.pascal
+import java.util.Scanner;
+
+public class PascalTriangle {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter the number of rows for Pascal's Triangle: ");
+        int rows = scan.nextInt();
+        printPascalTriangle(rows);
+    }
+
+    private static void printPascalTriangle(int rows) {
+        for (int i = 0; i < rows; i++) {
+            // Print leading spaces
+            for (int j = 0; j < rows - i; j++) {
+                System.out.print(" ");
+            }
+            // Print Pascal's Triangle values
+            int number = 1;
+            for (int j = 0; j <= i; j++) {
+                System.out.print(number + " ");
+                number = number * (i - j) / (j + 1);
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+8.righttriangle
+
+public class RightTrianglePattern {
+    public static void main(String[] args) {
+        int numRows = 5; // You can change this value to print a larger or smaller triangle
+        for (int i = 1; i <= numRows; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+}
